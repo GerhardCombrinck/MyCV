@@ -1,0 +1,216 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/*company logo inside teh container*/
+.TimelineLogo {
+  max-height: 100px;
+  max-width: 150px;
+  float: right;
+  margin-top: 20px;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.navbar {
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 20px;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  /* Make sure that all arrows are pointing leftwards */
+  /* Make sure all circles are at the same spot */
+  /* Make all right containers behave like the left ones */
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    /* Place the timelime to the left */
+    /* Full-width containers */
+  }
+  .container .timeline::after {
+    left: 31px;
+  }
+  .container .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+}
+
+.container .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.container .left::after, .container .right::after {
+  left: 15px;
+}
+
+.container .right {
+  left: 0%;
+}
+
+.containerA {
+  background-color: #474e5d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1600px;
+  text-align: center;
+}
+
+.cardGrid {
+  background-color: #474e5d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  -ms-grid-columns: (250px)[3];
+      grid-template-columns: repeat(3, 250px);
+  max-width: 1600px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  max-width: 240px;
+  height: 200px;
+  background-color: white;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.cardImage {
+  max-width: 200px;
+  margin: 20px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container2 {
+  padding: 2px 16px;
+}
+/*# sourceMappingURL=main.css.map */
