@@ -8,14 +8,14 @@ body {
   justify-content: center;
 }
 
-/* The actual timeline (the vertical ruler) */
+/* The actual timeline 
 .timeline {
   position: relative;
   max-width: 1500px;
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
+/* The actual timeline 
 .timeline::after {
   content: '';
   position: absolute;
@@ -29,7 +29,7 @@ body {
 
 
 
-/*company logo inside teh container*/
+/*company logo inside container*/
 .TimelineLogo {
   max-height: 100px;
   max-width: 150px;
