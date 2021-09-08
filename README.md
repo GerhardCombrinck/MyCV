@@ -1,11 +1,13 @@
-Project Name: MyCV
+#Project Name: MyCV
 
-Description: A fun project to make a CV as cool as possible
+##Description: 
+A fun project to make a CV as cool as possible
 
-Table of contents:
+##Table of contents:
 
-Installation:
+##Installation:
 
-Usage (With Screenshots):
+##Usage (With Screenshots):
 
-Credits Section: All the credit here goes to the creator Gerhard Combrinck and and the teachers at Hyperiondev.
+##Credits Section: 
+All the credit here goes to the creator Gerhard Combrinck and and the teachers at Hyperiondev.
