@@ -13,6 +13,7 @@ Download the repository to any folder on you PC and open the "index.html" file.
 
 ## 2. Usage (With Screenshots):
 This is just a static website, no functions to worry about.
+![Top of page](/Screenshot.png)
 
 ## 3. Credits Section: 
 All the credit here goes to the creator Gerhard Combrinck and and the teachers at Hyperiondev.
